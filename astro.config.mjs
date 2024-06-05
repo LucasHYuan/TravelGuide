@@ -5,23 +5,21 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: 'Travel Guide',
 			social: {
 				github: 'https://github.com/withastro/starlight',
 			},
 			sidebar: [
 				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', link: '/guides/example/' },
-					],
-				},
-				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
-				},
+			      label: '旅游攻略',
+			      autogenerate: { directory: '旅游攻略' },
+			    },
+				
 			],
+			customCss: [
+		    	// 你的自定义 CSS 文件的相对路径
+		    	'./src/styles/custom.css',
+		    ],
 		}),
 	],
 });
